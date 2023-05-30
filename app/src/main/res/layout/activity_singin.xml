@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sing in"
+                android:textSize="30dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                />
+
+         </LinearLayout>
+        
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/inputagen"
+                android:gravity="center"
+                android:paddingStart="10dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/email" />
+
+                <EditText
+                    android:id="@+id/agenceEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spcial_input"
+                    android:hint="Enter your email "
+                    android:layout_weight="3"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/agencePassword"
+                    style="@style/TextInputLayoutTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#AEABAB"
+                    app:hintEnabled="false"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/inputagen"
+                        android:hint="Enter password"
+                        android:inputType="textPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="56dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:background="@drawable/inputagen"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingStart="10dp">-->
+<!--                >-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:src="@drawable/key_24"/>-->
+
+
+<!--                <EditText-->
+<!--                    android:id="@+id/agencePassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/spcial_input"-->
+<!--                    android:hint="Enter your password "-->
+<!--                    android:layout_weight="3"-->
+<!--                    />-->
+<!--            </LinearLayout>-->
+
+            <Button
+                android:id="@+id/agenceButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:padding="10dp"
+                android:text="Sing In"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="@drawable/spbuton"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You do not have an account?"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginStart="20dp"
+
+                    />
+                <TextView
+                    android:id="@+id/singupTextViewAgen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sing up"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/colorfontend"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

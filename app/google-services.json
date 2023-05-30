@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "873880380020",
+    "project_id": "customerdriver-83697",
+    "storage_bucket": "customerdriver-83697.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873880380020:android:9ea0d9f7484ab13c736721",
+        "android_client_info": {
+          "package_name": "com.example.agencedrive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873880380020-k5ecanmlarvjbcpdu8m79ipdmlfphm7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo7xWTUaAcy8VCfFoP8TTiA9n6m6XOAyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873880380020-k5ecanmlarvjbcpdu8m79ipdmlfphm7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
