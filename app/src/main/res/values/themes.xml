@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AgenceDrive" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">
+            @color/colorfontend
+        </item>
+    </style>
+
+    <style name="Theme.AgenceDrive" parent="Base.Theme.AgenceDrive" />
+
+    <style name="TextInputLayoutTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!--        <item name="android:textColorHint">@color/text_color_password_forgot</item>-->
+        <item name="boxStrokeColor">@color/cardview_dark_background</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+</resources>
