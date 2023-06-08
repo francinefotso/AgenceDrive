@@ -5,11 +5,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.agencedrive.MyAdapter
-import com.example.agencedrive.News
+import com.example.agencedrive.adapter.MyAdapter
+import com.example.agencedrive.adapter.News
 import com.example.agencedrive.R
 import com.example.agencedrive.databinding.FragmentHomeBinding
 
@@ -21,6 +22,7 @@ class HomeFragment : Fragment() {
     lateinit var imageId: ArrayList<Int>
     lateinit var heading: ArrayList<String>
     lateinit var hours: ArrayList<String>
+    lateinit var searchView: SearchView
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -31,10 +33,12 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+//        Log.i("{}message","home")
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        return root
         initiazeView(root)
+        return root
+
     }
 
 
@@ -44,15 +48,21 @@ class HomeFragment : Fragment() {
     }
 
     fun initiazeView(root: View) {
+        Log.i("{}message","home")
+
+//        searchView = requireView().findViewById(R.id.searchview)
+//        searchView.clearFocus()
+//        searchView.setOnQueryTextListener(/* listener = */ object )
         newRecylerView = root.findViewById(R.id.recycleview)
         val list: List<News> = listOf(
 
-            News(titleImag = "", heading = "first", hours = "12:30 pm"),
-            News(titleImag = "", heading = "second", hours = "14:30s pm"),
-            News(titleImag = "", heading = "third", hours = "14:30s pm"),
-            News(titleImag = "", heading = "fourth", hours = "14:30s pm")
+            News(titleImag = "", heading = "firstgdcbjbiijdhjnbnbjbjjhhuhxsxshxshixshihsic"),
+            News(titleImag = "", heading = "secondcbsbcjkshskldllsJlkjididhhduidhushcsjcsjsc"),
+            News(titleImag = "", heading = "thirdhbscbjsbclsansnduidgeuyiwywiwiwidwydjscjskbshod"),
+            News(titleImag = "", heading = "fourthbdiuduolidloidojwiwohwdhsdhudiwhdwidj;di;djiudwoduqhdihdu")
         )
 //            Log.i("","$newRecylerView")
+        Log.i("{}message","recycleview")
         var adapter = MyAdapter(list, requireContext())
         newRecylerView.layoutManager = LinearLayoutManager(requireContext())
         newRecylerView.adapter = adapter

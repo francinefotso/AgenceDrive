@@ -18,10 +18,10 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class AuthentificationServiceActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_authentification_service)
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_authentification_service)
+//    }
 
 
     companion object{
@@ -49,6 +49,7 @@ class AuthentificationServiceActivity : AppCompatActivity() {
                     }
                 }
         }
+
 
         fun connectUser(
             email: String,

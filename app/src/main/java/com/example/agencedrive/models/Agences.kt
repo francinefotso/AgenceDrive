@@ -6,16 +6,14 @@ class Agences {
     var phone : String
     var email : String
     var password:String
-    var passconfirm :String
 
-    constructor(firstName: String, lastName: String,  phone: String, email: String,password: String, passconfirm: String){
+    constructor(firstName: String, lastName: String,  phone: String, email: String,password: String){
 
         this.firstName = firstName
         this.lastName = lastName
         this.phone = phone
         this.email = email
         this.password = password
-        this.passconfirm = passconfirm
 
     }
     override fun equals(other: Any?): Boolean {

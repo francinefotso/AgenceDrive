@@ -21,7 +21,6 @@ class FirebaseUserServices {
         private val PUBLICATIONS_COLLECTIONS ="Publications"
     private val AGENCE_COLLECTION_NAME = "Agences"
 
-
     fun verifyUserForRegister(
         agences: Agences,
         context: Context,
