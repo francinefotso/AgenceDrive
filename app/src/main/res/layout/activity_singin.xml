@@ -99,34 +99,6 @@
 
             </LinearLayout>
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="56dp"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:layout_marginTop="50dp"-->
-<!--                android:background="@drawable/inputagen"-->
-<!--                android:gravity="center"-->
-<!--                android:paddingStart="10dp">-->
-<!--                >-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginEnd="10dp"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:src="@drawable/key_24"/>-->
-
-
-<!--                <EditText-->
-<!--                    android:id="@+id/agencePassword"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:background="@drawable/spcial_input"-->
-<!--                    android:hint="Enter your password "-->
-<!--                    android:layout_weight="3"-->
-<!--                    />-->
-<!--            </LinearLayout>-->
-
             <Button
                 android:id="@+id/agenceButton"
                 android:layout_width="match_parent"
@@ -136,15 +108,15 @@
                 android:layout_marginTop="50dp"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:background="@drawable/spbuton"
+                android:backgroundTint="@color/colorfontend"
                 />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
                 >
                 <TextView
                     android:layout_width="match_parent"
@@ -153,8 +125,8 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:layout_marginStart="20dp"
-
                     />
+
                 <TextView
                     android:id="@+id/singupTextViewAgen"
                     android:layout_width="match_parent"

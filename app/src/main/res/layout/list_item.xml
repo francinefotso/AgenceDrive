@@ -10,7 +10,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_weight="1"
-        android:src="@drawable/threflowers"
+        android:src="@drawable/chauff"
         />
 
     <TextView
@@ -24,12 +24,4 @@
         android:layout_height="match_parent"
         />
 
-
-    <Button
-        android:id="@+id/btnsuivre"
-        android:layout_width="30dp"
-        android:layout_height="36dp"
-        android:layout_weight="3"
-        android:backgroundTint="@color/bag"
-        android:text="suivre" />
 </LinearLayout>

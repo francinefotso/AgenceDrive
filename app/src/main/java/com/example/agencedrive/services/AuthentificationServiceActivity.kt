@@ -5,14 +5,13 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.agencedrive.R
 import com.example.agencedrive.activities.HomeActivity
+import com.example.agencedrive.activities.LoginActivity
 import com.example.agencedrive.constants.PreferencesConstant
 import com.example.agencedrive.models.Agences
-import com.example.agencedrive.utilities.Preference
+import com.example.chauffeurapp.Utilities.Preference
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -138,8 +137,13 @@ class AuthentificationServiceActivity : AppCompatActivity() {
 
 
 
-        fun logout(){
+        fun logout(context:Context) {
+            val preference = Preference.Preference(context,PreferencesConstant.PREFERENCE_NAME)
+            preference.removeAllPreference()
             auth.signOut()
+            val intent = Intent(context, LoginActivity::class.java)
+            context.startActivity(intent)
+            (context as Activity).finish()
         }
     }
 }

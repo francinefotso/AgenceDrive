@@ -1,7 +1,7 @@
 package com.example.agencedrive.fragments.home
 
+import android.app.Activity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +13,7 @@ import com.example.agencedrive.adapter.MyAdapter
 import com.example.agencedrive.adapter.News
 import com.example.agencedrive.R
 import com.example.agencedrive.databinding.FragmentHomeBinding
+import com.example.agencedrive.services.FirebaseUserServices
 
 class HomeFragment : Fragment() {
 
@@ -36,9 +37,12 @@ class HomeFragment : Fragment() {
 //        Log.i("{}message","home")
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        FirebaseUserServices.displayAgence(requireContext())
+        (requireContext() as Activity).runOnUiThread{
+//            Log.i("message 1","first message")
+        }
         initiazeView(root)
         return root
-
     }
 
 
@@ -47,25 +51,31 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
+
     fun initiazeView(root: View) {
-        Log.i("{}message","home")
+
+        newRecylerView = root.findViewById(R.id.recycleview)
+        var adapter = MyAdapter(FirebaseUserServices.getAgency(),requireContext())
+        newRecylerView.layoutManager = LinearLayoutManager(requireContext())
+        newRecylerView.adapter = adapter
+//        Log.i("{}message","home")
 
 //        searchView = requireView().findViewById(R.id.searchview)
 //        searchView.clearFocus()
 //        searchView.setOnQueryTextListener(/* listener = */ object )
-        newRecylerView = root.findViewById(R.id.recycleview)
-        val list: List<News> = listOf(
-
-            News(titleImag = "", heading = "firstgdcbjbiijdhjnbnbjbjjhhuhxsxshxshixshihsic"),
-            News(titleImag = "", heading = "secondcbsbcjkshskldllsJlkjididhhduidhushcsjcsjsc"),
-            News(titleImag = "", heading = "thirdhbscbjsbclsansnduidgeuyiwywiwiwidwydjscjskbshod"),
-            News(titleImag = "", heading = "fourthbdiuduolidloidojwiwohwdhsdhudiwhdwidj;di;djiudwoduqhdihdu")
-        )
-//            Log.i("","$newRecylerView")
-        Log.i("{}message","recycleview")
-        var adapter = MyAdapter(list, requireContext())
-        newRecylerView.layoutManager = LinearLayoutManager(requireContext())
-        newRecylerView.adapter = adapter
+//        newRecylerView = root.findViewById(R.id.recycleview)
+//        val list: List<News> = listOf(
+//
+//            News(titleImag = "", heading = "firstgdcbjbiijdhjnbnbjbjjhhuhxsxshxshixshihsic"),
+//            News(titleImag = "", heading = "secondcbsbcjkshskldllsJlkjididhhduidhushcsjcsjsc"),
+//            News(titleImag = "", heading = "thirdhbscbjsbclsansnduidgeuyiwywiwiwidwydjscjskbshod"),
+//            News(titleImag = "", heading = "fourthbdiuduolidloidojwiwohwdhsdhudiwhdwidj;di;djiudwoduqhdihdu")
+//        )
+////            Log.i("","$newRecylerView")
+////        Log.i("{}message","recycleview")
+//        var adapter = MyAdapter(list, requireContext())
+//        newRecylerView.layoutManager = LinearLayoutManager(requireContext())
+//        newRecylerView.adapter = adapter
 //        newRecylerView.setHasFixedSize(true)
 //        newArrayList = arrayListOf<News>()
     }

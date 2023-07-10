@@ -7,12 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.agencedrive.R
+import com.example.agencedrive.models.Agences
 import com.google.android.material.imageview.ShapeableImageView
 
 
 
 
-class MyAdapter(private val datalist: List<News>, private val context: Context) :
+class MyAdapter(private val datalist: MutableList<Agences>, private val context: Context) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):MyViewHolder {
@@ -24,7 +25,7 @@ class MyAdapter(private val datalist: List<News>, private val context: Context) 
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.tvHiading.text = datalist!!.get(position).heading
+        holder.tvHiading.text = datalist!!.get(position).firstName
 //        holder.hours.text = datalist!!.get(position).hours
 
 //        Log.i("{}",datalist.get(position).toString())
